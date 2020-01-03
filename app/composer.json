@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/yaml": "^4.3",
+        "doctrine/annotations": "^1.8",
+        "phpmailer/phpmailer": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ifnc\\Tads\\": "src"
+        }
+    }
+}

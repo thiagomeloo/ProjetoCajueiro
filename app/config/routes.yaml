@@ -1,0 +1,21 @@
+#Configuração de rotas
+/login-form:  LoginFormController
+/login: LoginController
+/logout:  LogoutController
+/404found:  path404Controller
+/main: MainController
+
+/storeUsuario: StoreUsuarioController
+/editarUsuario: EditarUsuarioFormController
+/deletarUsuario: DeletarUsuarioController
+/inativarUsuario: InativarUsuarioController
+
+/formValidaUser: FormValidaUserController
+/validaUser: ValidaUserController
+
+/gerenciarAdmin: GerenciarAdminController
+/cadastrarAdmin: CadastrarAdminController
+
+
+
+
