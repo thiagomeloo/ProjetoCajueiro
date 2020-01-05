@@ -16,6 +16,9 @@
 /gerenciarAdmin: GerenciarAdminController
 /cadastrarAdmin: CadastrarAdminController
 
+/getQrCode: GetQrCodeController
+/gerenciarQrCode: GerenciarQrCodeController
+
 
 
 

@@ -15,6 +15,7 @@ paths_unprotected:
   - /404found/
   - /formValidaUser/
   - /validaUser/
+  - /getQrCode/
 # caminho seguido quando é acessado um sem permissão
 path_unprotected_default:
   /login-form

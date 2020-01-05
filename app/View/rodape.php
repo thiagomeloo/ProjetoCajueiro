@@ -1,7 +1,7 @@
 </div>
 <footer class="bg_color_secundary sticky-footer mt-2 ">
     <div class="container my-auto">
-        <div class="text-center my-auto copyright"><span style="font-size: 16px;">Copyright © Thiago Melo; Victor Oliveira - 2019</span></div>
+        <div class="text-center my-auto copyright"><span style="font-size: 16px;">Copyright © Thiago Melo; IFRN - 2020</span></div>
     </div>
 </footer>
 

@@ -38,8 +38,7 @@
                     <hr>
                     <div class="margin-center">
                         <a class="btn my_FontColor" href=""> Esqueci minha senha </a>
-                        <hr>
-                        <a class="btn  my_FontColor" href=""> Acesso do Responsável </a>
+
                     </div>
                 </div>
             </div>

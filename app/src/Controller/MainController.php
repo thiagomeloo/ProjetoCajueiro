@@ -22,7 +22,7 @@ class MainController implements IController
         switch ($usuario->tipo_user){
             case 1:
                 $itens = array("itens" =>
-                    array( "url" => '/gerenciarAluno', "icone" => 'fa-user-graduate', "nome" => ' QR CODE '),
+                    array( "url" => '/gerenciarQrCode', "icone" => 'fa-user-graduate', "nome" => ' QR CODE '),
                     array( "url" => '/gerenciarAdmin', "icone" => 'fa-user-secret', "nome" => ' GERENCIAR ADMIN ')
                 );
                 break;
