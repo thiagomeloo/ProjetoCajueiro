@@ -1,9 +1,6 @@
 <?php
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Entity\AlunoResponsavel;
-use Ifnc\Tads\Entity\AlunoTurma;
-use Ifnc\Tads\Entity\Endereco;
 use Ifnc\Tads\Entity\Usuario;
 use Ifnc\Tads\Helper\Flash;
 use Ifnc\Tads\Helper\Message;
@@ -22,20 +19,7 @@ class DeletarUsuarioController implements IController
         $id = $_GET["id"];
         try {
             $user = Usuario::find($id);
-            Endereco::delete($user->id_endereco);
             Usuario::delete($id);
-
-            $alTurma = AlunoTurma::all("id_aluno = ".$id);
-
-            foreach ($alTurma as $at){
-                AlunoTurma::delete($at->id);
-            }
-
-            $alResp = AlunoResponsavel::all("id_aluno = ".$id);
-
-            foreach ($alResp as $ar){
-                AlunoResponsavel::delete($ar->id);
-            }
 
 
             $this->create(new Message(

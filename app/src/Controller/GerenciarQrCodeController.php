@@ -32,14 +32,14 @@ class GerenciarQrCodeController implements IController
             ],
             [
                 "usuario" => Usuario::download(),
-                "nomePag" => "Gerenciar QrCode",
-                "urlCadastrar" => "/cadastrarAdmin",
+                "nomePag" => "Gerenciar Qr Code",
+                "urlCadastrar" => "/cadastrarQrCode",
                 "entidade" => "QrCode",
                 "QrCodesArray"=> $qrcodes,
                 "itens" => $_SESSION["itensMenu"],
-                "qtdAtivo" => Usuario::count("tipo_user = 1 and status_user = 1"),
-                "qtdInativo" => Usuario::count("tipo_user = 1 and status_user != 1"),
-                "qtdTotal" => Usuario::count()
+                "qtdAtivo" => 0,
+                "qtdInativo" => 0,
+                "qtdTotal" => 0
             ]);
         Transaction::close();
     }

@@ -4,25 +4,23 @@
 namespace Ifnc\Tads\Controller;
 
 
+
+
+use Ifnc\Tads\Entity\QrCode;
 use Ifnc\Tads\Entity\Usuario;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
 
-class EditarUsuarioFormController implements IController
+class EditarQrCodeFormController implements IController
 {
 
     public function request(): void
     {
         Transaction::open();
 
-        $us = Usuario::find($_GET["id"]);
+        $qrcode = QrCode::find($_GET["id"]);
 
-        $type = isset($_GET["type"]) ? $_GET["type"] : 0;
-
-        $alResp = null;
-        $turmas = null;
-        $turmaAtt = null;
 
 
 
@@ -32,18 +30,13 @@ class EditarUsuarioFormController implements IController
             [
 
                 "cabecalho.php",
-                "form-store-usuario.php",
+                "form-store-qrcode.php",
                 "rodape.php"
 
             ],
             [
                 "usuario" => Usuario::download(),
-                "usuarioAtt" => $us,
-                "type" => $type,
-                "tpUser" => $us->tipo_user,
-                "respAtt" => $alResp,
-                "turmas" => $turmas,
-                "turmaAtt" => $turmaAtt,
+                "qrCodeAtt" => $qrcode,
                 "itens" => $_SESSION["itensMenu"],
                 "name_btn" => "Atualizar"
             ]);

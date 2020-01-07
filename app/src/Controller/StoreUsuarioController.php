@@ -1,10 +1,6 @@
 <?php
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Entity\AlunoResponsavel;
-use Ifnc\Tads\Entity\AlunoTurma;
-use Ifnc\Tads\Entity\Endereco;
-use Ifnc\Tads\Entity\Responsavel;
 use Ifnc\Tads\Entity\Usuario;
 use Ifnc\Tads\Helper\Email;
 use Ifnc\Tads\Helper\Flash;

@@ -2,11 +2,10 @@
 
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Entity\Endereco;
 use Ifnc\Tads\Entity\Usuario;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
-use PHPMailer\PHPMailer\Exception;
+
 
 class MainController implements IController
 {
@@ -22,7 +21,7 @@ class MainController implements IController
         switch ($usuario->tipo_user){
             case 1:
                 $itens = array("itens" =>
-                    array( "url" => '/gerenciarQrCode', "icone" => 'fa-user-graduate', "nome" => ' QR CODE '),
+                    array( "url" => '/gerenciarQrCode', "icone" => 'fa-qrcode', "nome" => ' QR CODE '),
                     array( "url" => '/gerenciarAdmin', "icone" => 'fa-user-secret', "nome" => ' GERENCIAR ADMIN ')
                 );
                 break;

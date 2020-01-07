@@ -71,13 +71,10 @@ use Ifnc\Tads\Helper\Util;
                  <td><?=$qrcodeArray->texto != null ? $qrcodeArray->texto : ''?></td>
                  <td><?=$qrcodeArray->criador->nome != null ? $qrcodeArray->criador->nome : ''?></td>
                  <td>
-                     <a class="btn btn-circle bg_color_btn" href="\editarUsuario?id=<?=$qrcodeArray->id?>">
+                     <a class="btn btn-circle bg_color_btn" href="\editarQrCode?id=<?=$qrcodeArray->id?>">
                          <i class="btn fas fa-user-edit fa-1x my_FontColor"></i>
                      </a>
-                     <a class="btn btn-circle bg_color_btn" href="/inativarUsuario?id='<?=$qrcodeArray->id?>'">
-                         <i class="btn fas fa-minus-circle fa-1x my_FontColor"></i>
-                     </a>
-                     <a class="btn btn-circle bg_color_btn" id="btnDelete" onclick='confirmDelete("/deletarUsuario?id=<?=$qrcodeArray->id?>")' data-toggle="modal" data-target="#ExemploModalCentralizado">
+                     <a class="btn btn-circle bg_color_btn" id="btnDelete" onclick='confirmDelete("/deletarQrCode?id=<?=$qrcodeArray->id?>")' data-toggle="modal" data-target="#ExemploModalCentralizado">
                          <i class="btn fas fa-user-times fa-1x my_FontColor"></i>
                      </a>
                  </td>

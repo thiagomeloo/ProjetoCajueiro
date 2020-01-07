@@ -2,14 +2,14 @@
 namespace Ifnc\Tads\Controller;
 
 
-use Ifnc\Tads\Entity\Usuario;
+use Ifnc\Tads\Entity\QrCode;
 use Ifnc\Tads\Helper\Flash;
 use Ifnc\Tads\Helper\Message;
 use Ifnc\Tads\Helper\Transaction;
 use Ifnc\Tads\Helper\Util;
 
 
-class InativarUsuarioController implements IController
+class DeletarQrCodeController implements IController
 {
 
     use Flash;
@@ -19,21 +19,22 @@ class InativarUsuarioController implements IController
         Transaction::open();
         $id = $_GET["id"];
         try {
-            $user = Usuario::find($id);
-            $user->status_user = 2;
-            $user->store();
+            $qrcode = QrCode::find($id);
+            QrCode::delete($id);
+
             $this->create(new Message(
-                'Usuario inativado com Sucesso!','alert-success'
+                'Qr Code removido com Sucesso!','alert-success'
             ));
 
         } catch (\Exception $e) {
             $this->create(new Message(
-                'Ops, ocorreu algum erro ao inativar o usuario!','alert-danger'
+                'Ops, ocorreu algum erro ao remover o Qr Code!','alert-danger'
             ));
 
         }
         Transaction::close();
-        Util::redirect($user->tipo_user);
+
+        Util::redirect(2);
 
         //header('Location: /main', true, 302);
     }

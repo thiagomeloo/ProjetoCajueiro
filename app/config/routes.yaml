@@ -18,7 +18,8 @@
 
 /getQrCode: GetQrCodeController
 /gerenciarQrCode: GerenciarQrCodeController
-
-
-
+/cadastrarQrCode: CadastrarQrCodeController
+/storeQrCode: StoreQrCodeController
+/editarQrCode: EditarQrCodeFormController
+/deletarQrCode: DeletarQrCodeController
 

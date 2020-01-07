@@ -3,9 +3,7 @@
 namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\QrCode;
-use Ifnc\Tads\Entity\Usuario;
 use Ifnc\Tads\Helper\Flash;
-use Ifnc\Tads\Helper\Message;
 use Ifnc\Tads\Helper\Transaction;
 
 class GetQrCodeController implements IController

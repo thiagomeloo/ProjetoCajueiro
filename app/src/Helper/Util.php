@@ -26,22 +26,7 @@ class Util
                 header('Location: /gerenciarAdmin', true, 302);
                 break;
             case 2:
-                header('Location: /gerenciarProfessor', true, 302);
-                break;
-            case 3:
-                header('Location: /gerenciarAluno', true, 302);
-                break;
-            case 4:
-                header('Location: /gerenciarTurma', true, 302);
-                break;
-            case 5:
-                header('Location: /turmaManager?id='.$value, true, 302);
-                break;
-            case 6:
-                header('Location: /minhaTurma', true, 302);
-                break;
-            case 7:
-                header('Location: /minhasDisciplinas', true, 302);
+                header('Location: /gerenciarQrCode', true, 302);
                 break;
             default:
                 header('Location: /main', true, 302);
