@@ -71,12 +71,16 @@ use Ifnc\Tads\Helper\Util;
                  <td><?=$qrcodeArray->texto != null ? $qrcodeArray->texto : ''?></td>
                  <td><?=$qrcodeArray->criador->nome != null ? $qrcodeArray->criador->nome : ''?></td>
                  <td>
+                     <a class="btn btn-circle bg_color_btn" href="#" data-toggle="modal" data-target="#modal2" onclick='geraQrCode("<?=$qrcodeArray->texto?>")' >
+                         <i class="btn fas fa-qrcode fa-1x my_FontColor"></i>
+                     </a>
                      <a class="btn btn-circle bg_color_btn" href="\editarQrCode?id=<?=$qrcodeArray->id?>">
                          <i class="btn fas fa-user-edit fa-1x my_FontColor"></i>
                      </a>
                      <a class="btn btn-circle bg_color_btn" id="btnDelete" onclick='confirmDelete("/deletarQrCode?id=<?=$qrcodeArray->id?>")' data-toggle="modal" data-target="#ExemploModalCentralizado">
                          <i class="btn fas fa-user-times fa-1x my_FontColor"></i>
                      </a>
+
                  </td>
              </tr>
              <?php } ?>
@@ -86,8 +90,7 @@ use Ifnc\Tads\Helper\Util;
  </div>
 
 
-
-<!-- Modal -->
+<!-- Modal excluir -->
 <div class="modal fade " id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content card">
@@ -108,3 +111,26 @@ use Ifnc\Tads\Helper\Util;
         </div>
     </div>
 </div>
+
+<!-- Modal qr code-->
+<div class="modal fade "  id="modal2" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="TituloModalCentralizado">QR CODE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-success text-center" id="content_modalqr">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-outline-warning" id="btnConfirmDel" >Imprimir</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

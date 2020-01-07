@@ -6,10 +6,23 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Zxing\\' => array($vendorDir . '/khanamiryan/qrcode-detector-decoder/lib'),
+    'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
+    'Symfony\\Component\\OptionsResolver\\' => array($vendorDir . '/symfony/options-resolver'),
+    'Symfony\\Component\\Mime\\' => array($vendorDir . '/symfony/mime'),
+    'Symfony\\Component\\Inflector\\' => array($vendorDir . '/symfony/inflector'),
+    'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     'Ifnc\\Tads\\' => array($baseDir . '/src'),
+    'Endroid\\QrCode\\' => array($vendorDir . '/endroid/qr-code/src'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib/Doctrine/Common/Lexer'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
+    'DASPRiD\\Enum\\' => array($vendorDir . '/dasprid/enum/src'),
+    'BaconQrCode\\' => array($vendorDir . '/bacon/bacon-qr-code/src'),
 );
