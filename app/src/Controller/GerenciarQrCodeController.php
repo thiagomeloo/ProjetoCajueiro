@@ -16,7 +16,7 @@ class GerenciarQrCodeController implements IController
     {
         Transaction::open();
 
-        $qrcodes = QrCode::all();
+        $qrcodes = QrCode::all(null, null);
         foreach ($qrcodes as $qrcode){
             $qrcode->criador = Usuario::find($qrcode->criador);
         }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login-full-page-bs4.css">
     <link rel="stylesheet" href="assets/css/estilo.css">
+    
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                     <h5 class="my_FontColor">Outros Serviços</h5>
                     <hr>
                     <div class="margin-center">
-                        <a class="btn my_FontColor" href=""> Esqueci minha senha </a>
+                        <a class="btn my_FontColor" href="/formValidaUser?email=teste@br.com"> Esqueci minha senha </a>
 
                     </div>
                 </div>

@@ -6,7 +6,7 @@ use Ifnc\Tads\Helper\Util;
 <div class="container-fluid">
      <div class="d-sm-flex justify-content-between align-items-center mb-4 margin_topo">
          <h3 class="my_FontColor col-auto"><?= $nomePag ?></h3>
-         <a class="col-sm col-lg-auto btn btn-lg fas fa-user-plus bg_color_btn my_FontColor" role="button" href="<?= $urlCadastrar ?>"> Cadastrar </a>
+         <a class="col-sm col-lg-auto btn btn-lg fas fa-plus bg_color_btn my_FontColor" role="button" href="<?= $urlCadastrar ?>"> Cadastrar </a>
      </div>
 
      <div class="row">
@@ -75,10 +75,10 @@ use Ifnc\Tads\Helper\Util;
                          <i class="btn fas fa-qrcode fa-1x my_FontColor"></i>
                      </a>
                      <a class="btn btn-circle bg_color_btn" href="\editarQrCode?id=<?=$qrcodeArray->id?>">
-                         <i class="btn fas fa-user-edit fa-1x my_FontColor"></i>
+                         <i class="btn fas fa-edit fa-1x my_FontColor"></i>
                      </a>
                      <a class="btn btn-circle bg_color_btn" id="btnDelete" onclick='confirmDelete("/deletarQrCode?id=<?=$qrcodeArray->id?>")' data-toggle="modal" data-target="#ExemploModalCentralizado">
-                         <i class="btn fas fa-user-times fa-1x my_FontColor"></i>
+                         <i class="btn fas fa-times fa-1x my_FontColor"></i>
                      </a>
 
                  </td>

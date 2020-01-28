@@ -1,5 +1,6 @@
 <?php
 namespace Ifnc\Tads\Helper;
+use Ifnc\Tads\Helper\Connection;
 
 use PDO;
 

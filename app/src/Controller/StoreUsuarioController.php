@@ -9,13 +9,19 @@ use Ifnc\Tads\Helper\SendEmail;
 use Ifnc\Tads\Helper\Transaction;
 use Ifnc\Tads\Helper\Util;
 
+use Symfony\Component\Yaml\Yaml;
 
 class StoreUsuarioController implements IController
 {
     use Flash;
+    
+    
 
     public function request(): void
     {
+        $config = Yaml::parseFile('../config/config.yaml');
+        $configEmail = Yaml::parseFile('../config/configEmail.yaml');
+    
         Transaction::open();
 
 
@@ -50,8 +56,8 @@ class StoreUsuarioController implements IController
                 "               Olá <b>{$usuario->nome}</b>, segue em anexo o codigo e link para validação de sua conta.<br>
                             Por favor insira uma senha de acesso no ato da validação.<br>
                             Codigo: <b>{$senha}</b><br>
-                            Link: http://localhost/formValidaUser?email={$usuario->email}<br>
-                            att: equipe SWE.";
+                            Link: http://{$config['name_host']}/formValidaUser?email={$usuario->email}<br>
+                            att: equipe {$configEmail['nome']}.";
 
             $em = SendEmail::send($email);
             if(em == 0){

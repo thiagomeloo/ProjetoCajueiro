@@ -1,0 +1,14 @@
+AcceptPathInfo On
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME}  -f [OR]
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#cria excessao de arquivos
+RewriteCond %{REQUEST_URI} !.(jpe?g?|png|gif|js|css|woff|woff2|tff) [NC]
+
+#redireciona a rota para index
+RewriteRule ^(.*)$ index.php?rota=$1 [QSA,NC,L]
+</IfModule>

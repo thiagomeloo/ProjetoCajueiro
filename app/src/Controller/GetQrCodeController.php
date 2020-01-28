@@ -22,7 +22,7 @@ class GetQrCodeController implements IController
 
         }else{
             //busca todos.
-             echo json_encode(QrCode::all());
+             echo json_encode(QrCode::all(null,null));
 
         }
 

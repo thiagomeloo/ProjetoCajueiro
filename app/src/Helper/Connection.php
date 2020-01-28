@@ -17,6 +17,7 @@ final class Connection
         $host = $config['connection']['host'];
         $type = $config['connection']['type'];
         $port = $config['connection']['port'];
+        
 
         // descobre qual o tipo (driver) de banco de dados a ser utilizado
         switch ($type) {

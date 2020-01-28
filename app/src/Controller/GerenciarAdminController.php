@@ -27,7 +27,7 @@ class GerenciarAdminController implements IController
                 "nomePag" => "Gerenciar Admin",
                 "urlCadastrar" => "/cadastrarAdmin",
                 "entidade" => "Administradores",
-                "usuariosArray"=> Usuario::all("tipo_user = 1"),
+                "usuariosArray"=> Usuario::all("tipo_user = 1",NULL),
                 "itens" => $_SESSION["itensMenu"],
                 "qtdAtivo" => Usuario::count("tipo_user = 1 and status_user = 1"),
                 "qtdInativo" => Usuario::count("tipo_user = 1 and status_user != 1"),

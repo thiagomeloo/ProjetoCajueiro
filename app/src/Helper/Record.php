@@ -79,10 +79,13 @@ abstract class Record
 
     }
 
-    public static function all($filter = NULL)
+    public static function all($filter = NULL,$order = "NULL")
     {
         $rc = new ReflectionClass(get_called_class());
         $sql = "SELECT * FROM {$rc->getShortName()}";
+        if($order){
+            $sql .= " {$order}";
+        }
         if($filter){
             $sql .= " WHERE {$filter}";
         }
@@ -99,6 +102,23 @@ abstract class Record
     {
         $rc = new ReflectionClass(get_called_class());
         $sql = "SELECT COUNT(*) FROM {$rc->getShortName()}";
+        if($filter){
+            $sql .= " WHERE {$filter}";
+        }
+
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchColumn();
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+    
+    public static function sum($filter = NULL)
+    {
+        $rc = new ReflectionClass(get_called_class());
+        $sql = "SELECT SUM(valor) FROM {$rc->getShortName()}";
         if($filter){
             $sql .= " WHERE {$filter}";
         }

@@ -1,0 +1,21 @@
+#configurações para envio de email
+
+#nome do remetente do email
+nome:
+  Nome
+
+#host do serviço de email
+host:
+  smtp.hostinger.com.br
+
+#porta smtp
+port:
+  587
+
+#email de envio
+email:
+  email@teste.com.br
+
+#senha do email
+senha:
+  senhaEMail

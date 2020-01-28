@@ -26,3 +26,7 @@ path_not_found:
 # namespace para controladores
 path_controller:
   \Ifnc\Tads\Controller\
+
+#nome do seu host para configurar link que é enviado via email
+name_host:
+  meusite.com.br

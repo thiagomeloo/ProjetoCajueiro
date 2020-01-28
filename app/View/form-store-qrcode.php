@@ -16,7 +16,7 @@
         <input type="number" class="d-none" name="id" value="<?=isset($qrCodeAtt) ? $qrCodeAtt->id : ''?>" >
 
 
-        <button type="submit" class="btn bg_color_secundary btn-lg fas fa-user-plus float-right my_FontColor" data-toggle-form-edit="#form">
+        <button type="submit" class="btn bg_color_secundary btn-lg fas fa-plus float-right my_FontColor" data-toggle-form-edit="#form">
             <?=$name_btn;?>
         </button>
     </form>
