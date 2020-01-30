@@ -15,12 +15,17 @@ paths_unprotected:
   - /404found/
   - /formValidaUser/
   - /validaUser/
+  - /getQrCode/
+  - /geraQrCode/
 # caminho seguido quando é acessado um sem permissão
 path_unprotected_default:
   /login-form
 # caminho seguido quando é acessado um inexistente
 path_not_found:
   /404found
+#nome do seu host para configurar link que é enviado via email
+name_host:
+  meusite.com.br
 # namespace para controladores
 path_controller:
   \Ifnc\Tads\Controller\
